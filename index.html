@@ -1,0 +1,61 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //Question 1
+      const function1 = () => {
+        console.log("Hello World");
+        return "SLIIT";
+      };
+      const function2 = (name) => {
+        console.log(`Hi ${name}`);
+      };
+
+      function2(function1());
+
+      //Question 2
+      let testObject = {
+        name: "Kaveen Akash",
+        Tel: "0767205950",
+        printDetails: () => {
+          document.write(`Name: ${testObject.name}`);
+        },
+      };
+      testObject.printDetails();
+
+      //Question 3
+        window.vehicleName = "Car";
+
+        const printVehicleName = () =>{
+            document.write(window.vehicleName )
+        }
+
+        const Vehicle = {
+            vehicleName:"Bike",
+            getVehicleName:() =>{
+              document.write(vehicleName);
+            }
+        }
+        printVehicleName();
+
+        Vehicle.getVehicleName();
+        //Question 4 
+        
+
+        //Question 5
+    fetch('http://jsonplaceholder.typicode.com/posts')
+        .then((response) => {
+          return response.json()
+        })
+        .then((data) => {
+          document.write(JSON.stringify(data));
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    </script>
+  </head>
+  <body></body>
+</html>
